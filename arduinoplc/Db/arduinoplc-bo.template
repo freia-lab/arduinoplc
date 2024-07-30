@@ -1,0 +1,5 @@
+record (bo, "$(P)$(D)coil-1") {
+    field(DTYP,"asynUInt32Digital")
+    field(OUT,"@asynMask($(PORT_WO) 0 0x1)UINT16")
+    field(UDFS, "NO_ALARM")
+}

@@ -1,0 +1,5 @@
+wrapper_url: 'https://github.com/freia-lab/arduinoplc.git'
+wrapper_git_desc: '374d5fae58414a33e0aa52396b62fbe440eb8e70'
+wrapper_diffs: [ " M arduinoplc.Makefile",  " M cmds/st.cmd",  " M configure/CONFIG_MODULE",  "?? arduinoplc/",  "?? iocsh/arduinoplc.iocsh",  "?? opi/arduinoplc_top.bob", ]
+module_git_desc: '374d5fae58414a33e0aa52396b62fbe440eb8e70'
+module_diffs: [ " M cmds/st.cmd",  " M configure/CONFIG_MODULE",  "?? arduinoplc/",  "?? iocsh/arduinoplc.iocsh",  "?? opi/arduinoplc_top.bob", ]

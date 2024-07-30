@@ -10,6 +10,7 @@ E3_MODULE_MAKEFILE := $(E3_MODULE_NAME).Makefile
 #     STREAM_DEP_VERSION := 2.8.24+1
 #
 # These will be automatically picked up by the build system.
+MODBUS_DEP_VERSION := 3.2.0+3
 
 -include $(TOP)/configure/CONFIG_OPTIONS
 -include $(TOP)/configure/CONFIG_MODULE.local

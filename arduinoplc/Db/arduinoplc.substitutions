@@ -1,0 +1,8 @@
+file "arduinoplc-bo.template" { pattern {}
+{}
+}
+
+file "arduinoplc-longin.template" { pattern
+{R               OFFSET      PORT               SCAN}
+{$(D)Reg-0   0  	     "$(PORT_RO)"	"I/O Intr"}
+}
