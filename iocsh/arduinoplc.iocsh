@@ -40,9 +40,9 @@ modbusInterposeConfig("$(ASYN_PORT_NAME)",0,1900,500)
 #			 'PLC type'
 
 
-drvModbusAsynConfigure(RO_DATA_$(ASYN_PORT_NAME), "$(ASYN_PORT_NAME)", 0, 3, 0x0000, 5, "UINT16", 10000, "arduinoplc")
+drvModbusAsynConfigure(RO_DATA_$(ASYN_PORT_NAME), "$(ASYN_PORT_NAME)", 255, 3, 0x0000, 5, "UINT16", 10000, "arduinoplc")
 
-drvModbusAsynConfigure(WO_DATA_$(ASYN_PORT_NAME), "$(ASYN_PORT_NAME)", 0, 5, 0x0000, 1, "UINT16", 1, "arduinoplc")
+drvModbusAsynConfigure(WO_DATA_$(ASYN_PORT_NAME), "$(ASYN_PORT_NAME)", 255, 5, 0x0000, 1, "UINT16", 1, "arduinoplc")
 
 #Load your database defining the EPICS records
 

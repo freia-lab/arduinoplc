@@ -10,6 +10,7 @@
 core.*
 *-loc/*.Makefile
 arduinoplc/*.Makefile
+arduinoplc/O.*
 cellMods/
 testMods*/
 *PVs.list
