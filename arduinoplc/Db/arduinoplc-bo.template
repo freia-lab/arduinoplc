@@ -1,5 +1,8 @@
-record (bo, "$(P)$(D)coil-1") {
+record (bo, "$(P)$(D)$(S)") {
+    field(DESC, "$(DESC)")
     field(DTYP,"asynUInt32Digital")
-    field(OUT,"@asynMask($(PORT_WO) 0 0x1)UINT16")
+    field(OUT,"@asynMask($(PORT) $(OFFSET) 0x1)UINT16")
     field(UDFS, "NO_ALARM")
+    field(ZNAM, "$(ZNAM)")
+    field(ONAM, "$(ONAM)")
 }

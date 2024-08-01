@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2024-07-30 15:59:13 by konrad-->
+<!--Saved on 2024-08-01 16:44:41 by konrad-->
 <display version="2.0.0">
   <name>Display</name>
   <macros>
     <P>test:</P>
   </macros>
+  <width>1000</width>
   <height>800</height>
   <widget type="label" version="2.0.0">
     <name>Label</name>
     <class>TITLE</class>
-    <text>My Display</text>
+    <text>Arduino PMC</text>
     <x use_class="true">20</x>
     <y use_class="true">0</y>
     <width>550</width>
@@ -27,37 +28,14 @@
     <vertical_alignment use_class="true">1</vertical_alignment>
     <wrap_words use_class="true">false</wrap_words>
   </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_1</name>
-    <text>Some Value:</text>
-    <y>50</y>
-  </widget>
-  <widget type="textupdate" version="2.0.0">
-    <name>Text Update</name>
-    <pv_name>sim://sine</pv_name>
-    <x>100</x>
-    <y>50</y>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_2</name>
-    <class>COMMENT</class>
-    <text>Some comment.</text>
-    <x>220</x>
-    <y>50</y>
-    <width>140</width>
-    <font>
-      <font name="Comment" family="Source Sans Pro" style="ITALIC" size="16.0">
-      </font>
-    </font>
-  </widget>
   <widget type="group" version="3.0.0">
     <name>Asyn Record</name>
     <macros>
       <P>ioc24-arduinoplc:</P>
       <R>asynRec</R>
     </macros>
-    <x>320</x>
-    <y>20</y>
+    <x>480</x>
+    <y>90</y>
     <width>470</width>
     <height>680</height>
     <style>1</style>
@@ -104,32 +82,92 @@
       <y>12</y>
     </widget>
   </widget>
-  <widget type="group" version="3.0.0">
-    <name>Group</name>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display_1</name>
     <macros>
+      <N>1</N>
       <D>Coils:</D>
     </macros>
-    <x>80</x>
+    <file>embedded/coil.bob</file>
+    <x>30</x>
     <y>100</y>
-    <width>200</width>
     <height>30</height>
-    <style>3</style>
-    <transparent>true</transparent>
-    <widget type="bool_button" version="2.0.0">
-      <name>Boolean Button</name>
-      <pv_name>$(P)$(D)coil-1</pv_name>
-    </widget>
-    <widget type="led" version="2.0.0">
-      <name>LED</name>
-      <pv_name>$(P)$(D)coil-1</pv_name>
-      <x>180</x>
-    </widget>
-    <widget type="textentry" version="3.0.0">
-      <name>Text Entry</name>
-      <pv_name>$(P)$(D)coil-1</pv_name>
-      <x>120</x>
-      <width>30</width>
-      <height>30</height>
-    </widget>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display_2</name>
+    <macros>
+      <N>2</N>
+      <D>Coils:</D>
+    </macros>
+    <file>embedded/coil.bob</file>
+    <x>30</x>
+    <y>130</y>
+    <height>30</height>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display_3</name>
+    <macros>
+      <N>3</N>
+      <D>Coils:</D>
+    </macros>
+    <file>embedded/coil.bob</file>
+    <x>30</x>
+    <y>160</y>
+    <height>30</height>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display_4</name>
+    <macros>
+      <N>4</N>
+      <D>Coils:</D>
+    </macros>
+    <file>embedded/coil.bob</file>
+    <x>30</x>
+    <y>190</y>
+    <height>30</height>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display_5</name>
+    <macros>
+      <N>5</N>
+      <D>Coils:</D>
+    </macros>
+    <file>embedded/coil.bob</file>
+    <x>30</x>
+    <y>220</y>
+    <height>30</height>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display_6</name>
+    <macros>
+      <N>6</N>
+      <D>Coils:</D>
+    </macros>
+    <file>embedded/coil.bob</file>
+    <x>30</x>
+    <y>250</y>
+    <height>30</height>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display_7</name>
+    <macros>
+      <N>7</N>
+      <D>Coils:</D>
+    </macros>
+    <file>embedded/coil.bob</file>
+    <x>30</x>
+    <y>280</y>
+    <height>30</height>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display_8</name>
+    <macros>
+      <N>8</N>
+      <D>Coils:</D>
+    </macros>
+    <file>embedded/coil.bob</file>
+    <x>30</x>
+    <y>310</y>
+    <height>30</height>
   </widget>
 </display>

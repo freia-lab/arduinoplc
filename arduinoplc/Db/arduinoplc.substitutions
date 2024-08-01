@@ -1,5 +1,13 @@
-file "arduinoplc-bo.template" { pattern {}
-{}
+file "arduinoplc-bo.template" { pattern
+{S                OFFSET     PORT             ZNAM          ONAM       DESC}
+{coil-1		  0	     "$(PORT_COILS)" "LOW"	    "HIGH"     "Digital output 1"}
+{coil-2		  1	     "$(PORT_COILS)" "LOW"	    "HIGH"     "Digital output 2"}
+{coil-3		  2	     "$(PORT_COILS)" "LOW"	    "HIGH"     "Digital output 3"}
+{coil-4		  3	     "$(PORT_COILS)" "LOW"	    "HIGH"     "Digital output 4"}
+{coil-5		  4	     "$(PORT_COILS)" "LOW"	    "HIGH"     "Digital output 5"}
+{coil-6		  5	     "$(PORT_COILS)" "LOW"	    "HIGH"     "Digital output 6"}
+{coil-7		  6	     "$(PORT_COILS)" "LOW"	    "HIGH"     "Digital output 7"}
+{coil-8		  7	     "$(PORT_COILS)" "LOW"	    "HIGH"     "Digital output 8"}
 }
 
 file "arduinoplc-longin.template" { pattern
