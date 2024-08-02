@@ -1,13 +1,25 @@
 file "arduinoplc-bo.template" { pattern
 {S                OFFSET     PORT             ZNAM          ONAM       DESC}
-{coil-1		  0	     "$(PORT_COILS)" "LOW"	    "HIGH"     "Digital output 1"}
-{coil-2		  1	     "$(PORT_COILS)" "LOW"	    "HIGH"     "Digital output 2"}
-{coil-3		  2	     "$(PORT_COILS)" "LOW"	    "HIGH"     "Digital output 3"}
-{coil-4		  3	     "$(PORT_COILS)" "LOW"	    "HIGH"     "Digital output 4"}
-{coil-5		  4	     "$(PORT_COILS)" "LOW"	    "HIGH"     "Digital output 5"}
-{coil-6		  5	     "$(PORT_COILS)" "LOW"	    "HIGH"     "Digital output 6"}
-{coil-7		  6	     "$(PORT_COILS)" "LOW"	    "HIGH"     "Digital output 7"}
-{coil-8		  7	     "$(PORT_COILS)" "LOW"	    "HIGH"     "Digital output 8"}
+{DO-00		  0	     "$(PORT_COILS)" "LOW"	    "HIGH"     "Digital output 0"}
+{DO-01		  1	     "$(PORT_COILS)" "LOW"	    "HIGH"     "Digital output 1"}
+{DO-02		  2	     "$(PORT_COILS)" "LOW"	    "HIGH"     "Digital output 2"}
+{DO-03		  3	     "$(PORT_COILS)" "LOW"	    "HIGH"     "Digital output 3"}
+{DO-04		  4	     "$(PORT_COILS)" "LOW"	    "HIGH"     "Digital output 4"}
+{DO-05		  5	     "$(PORT_COILS)" "LOW"	    "HIGH"     "Digital output 5"}
+{DO-06		  6	     "$(PORT_COILS)" "LOW"	    "HIGH"     "Digital output 6"}
+{DO-07		  7	     "$(PORT_COILS)" "LOW"	    "HIGH"     "Digital output 7"}
+}
+
+file "arduinoplc-bi.template" { pattern
+{S                OFFSET     PORT             ZNAM          ONAM       DESC}
+{DI-00		  0	     "$(PORT_DI)"     "LOW"	    "HIGH"     "Digital input 0"}
+{DI-01		  1	     "$(PORT_DI)"     "LOW"	    "HIGH"     "Digital input 1"}
+{DI-02		  2	     "$(PORT_DI)"     "LOW"	    "HIGH"     "Digital input 2"}
+{DI-03		  3	     "$(PORT_DI)"     "LOW"	    "HIGH"     "Digital input 3"}
+{DI-04		  4	     "$(PORT_DI)"     "LOW"	    "HIGH"     "Digital input 4"}
+{DI-05		  5	     "$(PORT_DI)"     "LOW"	    "HIGH"     "Digital input 5"}
+{DI-06		  6	     "$(PORT_DI)"     "LOW"	    "HIGH"     "Digital input 6"}
+{DI-07		  7	     "$(PORT_DI)"     "LOW"	    "HIGH"     "Digital input 7"}
 }
 
 file "arduinoplc-longin.template" { pattern

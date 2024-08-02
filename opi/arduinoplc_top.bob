@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2024-08-01 16:44:41 by konrad-->
+<!--Saved on 2024-08-02 09:42:50 by konrad-->
 <display version="2.0.0">
   <name>Display</name>
   <macros>
@@ -28,65 +28,11 @@
     <vertical_alignment use_class="true">1</vertical_alignment>
     <wrap_words use_class="true">false</wrap_words>
   </widget>
-  <widget type="group" version="3.0.0">
-    <name>Asyn Record</name>
-    <macros>
-      <P>ioc24-arduinoplc:</P>
-      <R>asynRec</R>
-    </macros>
-    <x>480</x>
-    <y>90</y>
-    <width>470</width>
-    <height>680</height>
-    <style>1</style>
-    <font>
-      <font name="Header 2" family="Source Sans Pro" style="BOLD_ITALIC" size="21.0">
-      </font>
-    </font>
-    <foreground_color>
-      <color name="Read_Background" red="230" green="235" blue="232">
-      </color>
-    </foreground_color>
-    <line_color>
-      <color name="PRIMARY-GROUP-BORDER" red="151" green="188" blue="202">
-      </color>
-    </line_color>
-    <background_color>
-      <color name="Read_Background" red="230" green="235" blue="232">
-      </color>
-    </background_color>
-    <actions>
-    </actions>
-    <widget type="embedded" version="2.0.0">
-      <name>Embedded Display</name>
-      <file>../../freia-symbols/display-builder/asyn/asynRecord.bob</file>
-      <x>10</x>
-      <y>42</y>
-      <width>450</width>
-      <height>600</height>
-    </widget>
-    <widget type="combo" version="2.0.0">
-      <name>Combo Box</name>
-      <pv_name>$(P)$(R).PORT</pv_name>
-      <x>169</x>
-      <y>12</y>
-      <width>110</width>
-      <items>
-        <item>PORT1</item>
-      </items>
-    </widget>
-    <widget type="label" version="2.0.0">
-      <name>Label_140</name>
-      <text>Asyn Port:</text>
-      <x>59</x>
-      <y>12</y>
-    </widget>
-  </widget>
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display_1</name>
     <macros>
-      <N>1</N>
-      <D>Coils:</D>
+      <N>0</N>
+      <D>ArduinoPCM:</D>
     </macros>
     <file>embedded/coil.bob</file>
     <x>30</x>
@@ -96,8 +42,8 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display_2</name>
     <macros>
-      <N>2</N>
-      <D>Coils:</D>
+      <N>1</N>
+      <D>ArduinoPCM:</D>
     </macros>
     <file>embedded/coil.bob</file>
     <x>30</x>
@@ -107,8 +53,8 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display_3</name>
     <macros>
-      <N>3</N>
-      <D>Coils:</D>
+      <N>2</N>
+      <D>ArduinoPCM:</D>
     </macros>
     <file>embedded/coil.bob</file>
     <x>30</x>
@@ -118,8 +64,8 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display_4</name>
     <macros>
-      <N>4</N>
-      <D>Coils:</D>
+      <N>3</N>
+      <D>ArduinoPCM:</D>
     </macros>
     <file>embedded/coil.bob</file>
     <x>30</x>
@@ -129,8 +75,8 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display_5</name>
     <macros>
-      <N>5</N>
-      <D>Coils:</D>
+      <N>4</N>
+      <D>ArduinoPCM:</D>
     </macros>
     <file>embedded/coil.bob</file>
     <x>30</x>
@@ -140,8 +86,8 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display_6</name>
     <macros>
-      <N>6</N>
-      <D>Coils:</D>
+      <N>5</N>
+      <D>ArduinoPCM:</D>
     </macros>
     <file>embedded/coil.bob</file>
     <x>30</x>
@@ -151,8 +97,8 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display_7</name>
     <macros>
-      <N>7</N>
-      <D>Coils:</D>
+      <N>6</N>
+      <D>ArduinoPCM:</D>
     </macros>
     <file>embedded/coil.bob</file>
     <x>30</x>
@@ -162,12 +108,117 @@
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display_8</name>
     <macros>
-      <N>8</N>
-      <D>Coils:</D>
+      <N>7</N>
+      <D>ArduinoPCM:</D>
     </macros>
     <file>embedded/coil.bob</file>
     <x>30</x>
     <y>310</y>
     <height>30</height>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display_9</name>
+    <macros>
+      <N>0</N>
+      <D>ArduinoPCM:</D>
+    </macros>
+    <file>embedded/di.bob</file>
+    <x>450</x>
+    <y>100</y>
+    <height>30</height>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display_10</name>
+    <macros>
+      <N>1</N>
+      <D>ArduinoPCM:</D>
+    </macros>
+    <file>embedded/di.bob</file>
+    <x>450</x>
+    <y>130</y>
+    <height>30</height>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display_11</name>
+    <macros>
+      <N>2</N>
+      <D>ArduinoPCM:</D>
+    </macros>
+    <file>embedded/di.bob</file>
+    <x>450</x>
+    <y>160</y>
+    <height>30</height>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display_12</name>
+    <macros>
+      <N>3</N>
+      <D>ArduinoPCM:</D>
+    </macros>
+    <file>embedded/di.bob</file>
+    <x>450</x>
+    <y>190</y>
+    <height>30</height>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display_13</name>
+    <macros>
+      <N>4</N>
+      <D>ArduinoPCM:</D>
+    </macros>
+    <file>embedded/di.bob</file>
+    <x>450</x>
+    <y>220</y>
+    <height>30</height>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display_14</name>
+    <macros>
+      <N>5</N>
+      <D>ArduinoPCM:</D>
+    </macros>
+    <file>embedded/di.bob</file>
+    <x>450</x>
+    <y>250</y>
+    <height>30</height>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display_15</name>
+    <macros>
+      <N>6</N>
+      <D>ArduinoPCM:</D>
+    </macros>
+    <file>embedded/di.bob</file>
+    <x>450</x>
+    <y>280</y>
+    <height>30</height>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display_16</name>
+    <macros>
+      <N>7</N>
+      <D>ArduinoPCM:</D>
+    </macros>
+    <file>embedded/di.bob</file>
+    <x>450</x>
+    <y>310</y>
+    <height>30</height>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button</name>
+    <actions>
+      <action type="open_display">
+        <file>../../freia-symbols/display-builder/asyn/asynRecord.bob</file>
+        <macros>
+          <R>asynRec</R>
+          <P>ioc24-arduinoplc:</P>
+        </macros>
+        <target>window</target>
+        <description>AsynRec...</description>
+      </action>
+    </actions>
+    <x>870</x>
+    <y>680</y>
+    <tooltip>$(actions)</tooltip>
   </widget>
 </display>

@@ -5,7 +5,7 @@ require recsync
 require iocstats
 
 
-iocshLoad ("$(arduinoplc_DIR)arduinoplc.iocsh", "ASYN_PORT_NAME=PORT1,IP_ADDR=192.168.10.40,TOP=/opt/epics/autosave,IOCNAME=ioc24-arduinoplc,PREFIX=test:,DEV_NAME=Coils:")
+iocshLoad ("$(arduinoplc_DIR)arduinoplc.iocsh", "ASYN_PORT_NAME=PORT1,IP_ADDR=192.168.10.40,TOP=/opt/epics/autosave,IOCNAME=ioc24-arduinoplc,PREFIX=test:,DEV_NAME=ArduinoPCM:")
 
 
 # iocStats database
