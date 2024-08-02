@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2024-08-02 09:42:50 by konrad-->
+<!--Saved on 2024-08-02 11:26:57 by konrad-->
 <display version="2.0.0">
-  <name>Display</name>
+  <name>ArduinoPMC</name>
   <macros>
     <P>test:</P>
+    <D>ArduinoPMC:</D>
   </macros>
   <width>1000</width>
   <height>800</height>
@@ -32,7 +33,7 @@
     <name>Embedded Display_1</name>
     <macros>
       <N>0</N>
-      <D>ArduinoPCM:</D>
+      <D>ArduinoPMC:</D>
     </macros>
     <file>embedded/coil.bob</file>
     <x>30</x>
@@ -43,7 +44,7 @@
     <name>Embedded Display_2</name>
     <macros>
       <N>1</N>
-      <D>ArduinoPCM:</D>
+      <D>ArduinoPMC:</D>
     </macros>
     <file>embedded/coil.bob</file>
     <x>30</x>
@@ -54,7 +55,7 @@
     <name>Embedded Display_3</name>
     <macros>
       <N>2</N>
-      <D>ArduinoPCM:</D>
+      <D>ArduinoPMC:</D>
     </macros>
     <file>embedded/coil.bob</file>
     <x>30</x>
@@ -65,7 +66,7 @@
     <name>Embedded Display_4</name>
     <macros>
       <N>3</N>
-      <D>ArduinoPCM:</D>
+      <D>ArduinoPMC:</D>
     </macros>
     <file>embedded/coil.bob</file>
     <x>30</x>
@@ -76,7 +77,7 @@
     <name>Embedded Display_5</name>
     <macros>
       <N>4</N>
-      <D>ArduinoPCM:</D>
+      <D>ArduinoPMC:</D>
     </macros>
     <file>embedded/coil.bob</file>
     <x>30</x>
@@ -87,7 +88,7 @@
     <name>Embedded Display_6</name>
     <macros>
       <N>5</N>
-      <D>ArduinoPCM:</D>
+      <D>ArduinoPMC:</D>
     </macros>
     <file>embedded/coil.bob</file>
     <x>30</x>
@@ -98,7 +99,7 @@
     <name>Embedded Display_7</name>
     <macros>
       <N>6</N>
-      <D>ArduinoPCM:</D>
+      <D>ArduinoPMC:</D>
     </macros>
     <file>embedded/coil.bob</file>
     <x>30</x>
@@ -109,7 +110,7 @@
     <name>Embedded Display_8</name>
     <macros>
       <N>7</N>
-      <D>ArduinoPCM:</D>
+      <D>ArduinoPMC:</D>
     </macros>
     <file>embedded/coil.bob</file>
     <x>30</x>
@@ -120,7 +121,7 @@
     <name>Embedded Display_9</name>
     <macros>
       <N>0</N>
-      <D>ArduinoPCM:</D>
+      <D>ArduinoPMC:</D>
     </macros>
     <file>embedded/di.bob</file>
     <x>450</x>
@@ -131,7 +132,7 @@
     <name>Embedded Display_10</name>
     <macros>
       <N>1</N>
-      <D>ArduinoPCM:</D>
+      <D>ArduinoPMC:</D>
     </macros>
     <file>embedded/di.bob</file>
     <x>450</x>
@@ -142,7 +143,7 @@
     <name>Embedded Display_11</name>
     <macros>
       <N>2</N>
-      <D>ArduinoPCM:</D>
+      <D>ArduinoPMC:</D>
     </macros>
     <file>embedded/di.bob</file>
     <x>450</x>
@@ -153,7 +154,7 @@
     <name>Embedded Display_12</name>
     <macros>
       <N>3</N>
-      <D>ArduinoPCM:</D>
+      <D>ArduinoPMC:</D>
     </macros>
     <file>embedded/di.bob</file>
     <x>450</x>
@@ -164,7 +165,7 @@
     <name>Embedded Display_13</name>
     <macros>
       <N>4</N>
-      <D>ArduinoPCM:</D>
+      <D>ArduinoPMC:</D>
     </macros>
     <file>embedded/di.bob</file>
     <x>450</x>
@@ -175,7 +176,7 @@
     <name>Embedded Display_14</name>
     <macros>
       <N>5</N>
-      <D>ArduinoPCM:</D>
+      <D>ArduinoPMC:</D>
     </macros>
     <file>embedded/di.bob</file>
     <x>450</x>
@@ -186,7 +187,7 @@
     <name>Embedded Display_15</name>
     <macros>
       <N>6</N>
-      <D>ArduinoPCM:</D>
+      <D>ArduinoPMC:</D>
     </macros>
     <file>embedded/di.bob</file>
     <x>450</x>
@@ -197,7 +198,7 @@
     <name>Embedded Display_16</name>
     <macros>
       <N>7</N>
-      <D>ArduinoPCM:</D>
+      <D>ArduinoPMC:</D>
     </macros>
     <file>embedded/di.bob</file>
     <x>450</x>
@@ -220,5 +221,65 @@
     <x>870</x>
     <y>680</y>
     <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display</name>
+    <macros>
+      <N>0</N>
+    </macros>
+    <file>embedded/ai-int.bob</file>
+    <x>30</x>
+    <y>360</y>
+    <height>30</height>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display_17</name>
+    <macros>
+      <N>1</N>
+    </macros>
+    <file>embedded/ai-int.bob</file>
+    <x>30</x>
+    <y>390</y>
+    <height>30</height>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display_18</name>
+    <macros>
+      <N>2</N>
+    </macros>
+    <file>embedded/ai-int.bob</file>
+    <x>30</x>
+    <y>420</y>
+    <height>30</height>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display_19</name>
+    <macros>
+      <N>0</N>
+    </macros>
+    <file>embedded/ai-tp.bob</file>
+    <x>450</x>
+    <y>360</y>
+    <height>30</height>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display_20</name>
+    <macros>
+      <N>1</N>
+    </macros>
+    <file>embedded/ai-tp.bob</file>
+    <x>450</x>
+    <y>390</y>
+    <height>30</height>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display_21</name>
+    <macros>
+      <N>2</N>
+    </macros>
+    <file>embedded/ai-tp.bob</file>
+    <x>450</x>
+    <y>420</y>
+    <height>30</height>
   </widget>
 </display>

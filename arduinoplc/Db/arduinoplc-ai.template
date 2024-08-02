@@ -1,0 +1,8 @@
+record(ai,"$(P)$(D)$(S)") {
+    field(DESC, "$(DESC)")
+    field(DTYP,"asynFloat64")
+    field(EGU, "$(EGU)")
+    field(PREC, "$(PREC)")
+    field(INP,"@asyn($(PORT) $(OFFSET))FLOAT32_LE")
+    field(SCAN, "I/O Intr")
+}

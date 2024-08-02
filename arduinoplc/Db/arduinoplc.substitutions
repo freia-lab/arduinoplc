@@ -23,6 +23,21 @@ file "arduinoplc-bi.template" { pattern
 }
 
 file "arduinoplc-longin.template" { pattern
+{S                OFFSET     PORT                 DESC}
+{AI-00		  0	     "$(PORT_AI)"         "Analog input 0"}
+{AI-01		  2	     "$(PORT_AI)"     	  "Analog input 1"}
+{AI-02		  4	     "$(PORT_AI)"     	  "Analog input 2"}
+}
+
+file "arduinoplc-ai.template" { pattern
+{S                OFFSET     PORT                 EGU     PREC DESC}
+{TP-00		  6	     "$(PORT_AI)"     	  "॰C"	  "2"  "Temperature probe 0"}
+{TP-01		  8	     "$(PORT_AI)"     	  "॰C"	  "2"  "Temperature probe 1"}
+{TP-02		  10	     "$(PORT_AI)"     	  "॰C"	  "2"  "Temperature probe 2"}
+}
+
+
+file "arduinoplc-longin.template" { pattern
 {R               OFFSET      PORT               SCAN}
 {$(D)Reg-0   0  	     "$(PORT_RO)"	"I/O Intr"}
 }
