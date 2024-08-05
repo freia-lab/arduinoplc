@@ -43,7 +43,7 @@ modbusInterposeConfig("$(ASYN_PORT_NAME)",0,2000,0)
 drvModbusAsynConfigure(RO_DATA_$(ASYN_PORT_NAME), "$(ASYN_PORT_NAME)", 255, 3, 0x0000, 8, "UINT16", 1000, "arduinoplc")
 
 drvModbusAsynConfigure(COILS_DATA_$(ASYN_PORT_NAME), "$(ASYN_PORT_NAME)", 255, 5, 0x0000, 8, "UINT16", 1, "arduinoplc")
-drvModbusAsynConfigure(AO_DATA_$(ASYN_PORT_NAME), "$(ASYN_PORT_NAME)", 255, 6, 0x0000, 8, "UINT16", 1, "arduinoplc")
+drvModbusAsynConfigure(AO_DATA_$(ASYN_PORT_NAME), "$(ASYN_PORT_NAME)", 255, 16, 0x0000, 8, "UINT16", 1, "arduinoplc")
 drvModbusAsynConfigure(DI_DATA_$(ASYN_PORT_NAME), "$(ASYN_PORT_NAME)", 255, 2, 0x0000, 8, "UINT16", 500, "arduinoplc")
 drvModbusAsynConfigure(AI_DATA_$(ASYN_PORT_NAME), "$(ASYN_PORT_NAME)", 255, 4, 0x0000, 12, "UINT16", 1000, "arduinoplc")
 

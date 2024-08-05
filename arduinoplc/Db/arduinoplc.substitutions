@@ -34,10 +34,10 @@ file "arduinoplc-ai.template" { pattern
 {TP-00		  6	     "$(PORT_AI)"     	  FLOAT32_LE   "॰C"	  "2"  "Temperature probe 0"}
 {TP-01		  8	     "$(PORT_AI)"     	  FLOAT32_LE   "॰C"	  "2"  "Temperature probe 1"}
 {TP-02		  10	     "$(PORT_AI)"     	  FLOAT32_LE   "॰C"	  "2"  "Temperature probe 2"}
-{AO-00-RBK	  0	     "$(PORT_RO)"     	  FLOAT32_BE   ""	  "2"  "AO-00 read-back"}
-{AO-01-RBK	  2	     "$(PORT_RO)"     	  FLOAT32_BE   ""	  "2"  "AO-01 read-back"}
-{AO-02-RBK	  4	     "$(PORT_RO)"     	  FLOAT32_BE   ""	  "2"  "AO-02 read-back"}
-{AO-03-RBK	  6	     "$(PORT_RO)"     	  FLOAT32_BE   ""	  "2"  "AO-03 read-back"}
+{AO-00-RBK	  0	     "$(PORT_RO)"     	  FLOAT32_LE   ""	  "2"  "AO-00 read-back"}
+{AO-01-RBK	  2	     "$(PORT_RO)"     	  FLOAT32_LE   ""	  "2"  "AO-01 read-back"}
+{AO-02-RBK	  4	     "$(PORT_RO)"     	  FLOAT32_LE   ""	  "2"  "AO-02 read-back"}
+{AO-03-RBK	  6	     "$(PORT_RO)"     	  FLOAT32_LE   ""	  "2"  "AO-03 read-back"}
 }
 
 file "arduinoplc-ao.template" { pattern

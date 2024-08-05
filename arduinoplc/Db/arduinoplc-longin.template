@@ -2,5 +2,6 @@ record(longin,"$(P)$(D)$(S)") {
     field(DESC, "$(DESC)")
     field(DTYP,"asynInt32")
     field(INP,"@asyn($(PORT) $(OFFSET))INT32_LE")
+    field(EGU, "$(EGU='bit')")
     field(SCAN, "I/O Intr")
 }
