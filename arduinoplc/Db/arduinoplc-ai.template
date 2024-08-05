@@ -3,6 +3,6 @@ record(ai,"$(P)$(D)$(S)") {
     field(DTYP,"asynFloat64")
     field(EGU, "$(EGU)")
     field(PREC, "$(PREC)")
-    field(INP,"@asyn($(PORT) $(OFFSET))FLOAT32_LE")
+    field(INP,"@asyn($(PORT) $(OFFSET))$(DATA_TYPE)")
     field(SCAN, "I/O Intr")
 }

@@ -12,5 +12,8 @@ E3_MODULE_MAKEFILE := $(E3_MODULE_NAME).Makefile
 # These will be automatically picked up by the build system.
 MODBUS_DEP_VERSION := 3.2.0+3
 
+OPI_VERSION := 0.1.0
+OPI_DIRNAME := arduinoPMC
+
 -include $(TOP)/configure/CONFIG_OPTIONS
 -include $(TOP)/configure/CONFIG_MODULE.local

@@ -30,14 +30,29 @@ file "arduinoplc-longin.template" { pattern
 }
 
 file "arduinoplc-ai.template" { pattern
+{S                OFFSET     PORT                 DATA_TYPE    EGU     PREC DESC}
+{TP-00		  6	     "$(PORT_AI)"     	  FLOAT32_LE   "॰C"	  "2"  "Temperature probe 0"}
+{TP-01		  8	     "$(PORT_AI)"     	  FLOAT32_LE   "॰C"	  "2"  "Temperature probe 1"}
+{TP-02		  10	     "$(PORT_AI)"     	  FLOAT32_LE   "॰C"	  "2"  "Temperature probe 2"}
+{AO-00-RBK	  0	     "$(PORT_RO)"     	  FLOAT32_BE   ""	  "2"  "AO-00 read-back"}
+{AO-01-RBK	  2	     "$(PORT_RO)"     	  FLOAT32_BE   ""	  "2"  "AO-01 read-back"}
+{AO-02-RBK	  4	     "$(PORT_RO)"     	  FLOAT32_BE   ""	  "2"  "AO-02 read-back"}
+{AO-03-RBK	  6	     "$(PORT_RO)"     	  FLOAT32_BE   ""	  "2"  "AO-03 read-back"}
+}
+
+file "arduinoplc-ao.template" { pattern
 {S                OFFSET     PORT                 EGU     PREC DESC}
-{TP-00		  6	     "$(PORT_AI)"     	  "॰C"	  "2"  "Temperature probe 0"}
-{TP-01		  8	     "$(PORT_AI)"     	  "॰C"	  "2"  "Temperature probe 1"}
-{TP-02		  10	     "$(PORT_AI)"     	  "॰C"	  "2"  "Temperature probe 2"}
+{AO-00		  0	     "$(PORT_AO)"     	  ""	  "2"  "Analog output 0"}
+{AO-01		  2	     "$(PORT_AO)"     	  ""	  "2"  "Analog output 1"}
+{AO-02		  4	     "$(PORT_AO)"     	  ""	  "2"  "Analog output 2"}
+{AO-03		  6	     "$(PORT_AO)"     	  ""	  "2"  "Analog output 3"}
 }
 
 
 file "arduinoplc-longin.template" { pattern
-{R               OFFSET      PORT               SCAN}
-{$(D)Reg-0   0  	     "$(PORT_RO)"	"I/O Intr"}
+{S               OFFSET      PORT               DESC}
+{HR-00   	 0  	     "$(PORT_RO)"	"test"}
+{HR-01   	 2  	     "$(PORT_RO)"	"test"}
+{HR-02   	 4  	     "$(PORT_RO)"	"test"}
+{HR-03   	 6  	     "$(PORT_RO)"	"test"}
 }
