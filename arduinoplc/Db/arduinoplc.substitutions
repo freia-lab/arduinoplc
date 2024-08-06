@@ -38,14 +38,20 @@ file "arduinoplc-ai.template" { pattern
 {AO-01-RBK	  2	     "$(PORT_RO)"     	  FLOAT32_LE   ""	  "2"  "AO-01 read-back"}
 {AO-02-RBK	  4	     "$(PORT_RO)"     	  FLOAT32_LE   ""	  "2"  "AO-02 read-back"}
 {AO-03-RBK	  6	     "$(PORT_RO)"     	  FLOAT32_LE   ""	  "2"  "AO-03 read-back"}
+
+{VAR-00-RBK	  0	     "$(PORT_HRR)"     	  UINT16       ""	  "2"  "Status variable 0 read-back"}
+{VAR-01-RBK	  1	     "$(PORT_HRR)"    	  UINT16       ""	  "2"  "Status variable 1 read-back"}
+{VAR-02-RBK	  2	     "$(PORT_HRR)"     	  UINT16       ""	  "2"  "Status variable 2 read-back"}
+{VAR-03-RBK	  3	     "$(PORT_HRR)"    	  FLOAT32_LE   ""	  "2"  "Status variable 3 read-back"}
 }
 
 file "arduinoplc-ao.template" { pattern
-{S                OFFSET     PORT                 EGU     PREC DESC}
-{AO-00		  0	     "$(PORT_AO)"     	  ""	  "2"  "Analog output 0"}
-{AO-01		  2	     "$(PORT_AO)"     	  ""	  "2"  "Analog output 1"}
-{AO-02		  4	     "$(PORT_AO)"     	  ""	  "2"  "Analog output 2"}
-{AO-03		  6	     "$(PORT_AO)"     	  ""	  "2"  "Analog output 3"}
+{S                OFFSET     PORT                 DATA_TYPE    EGU     PREC DESC}
+{AO-00		  0	     "$(PORT_AO)"     	  FLOAT32_LE   ""	  "2"  "Analog output 0"}
+{AO-01		  2	     "$(PORT_AO)"     	  FLOAT32_LE   ""	  "2"  "Analog output 1"}
+{AO-02		  4	     "$(PORT_AO)"     	  FLOAT32_LE   ""	  "2"  "Analog output 2"}
+{AO-03		  6	     "$(PORT_AO)"     	  FLOAT32_LE   ""	  "2"  "Analog output 3"}
+{VAR-00		  0	     "$(PORT_HRW)"     	  UINT16       ""	  "0"  "Status variable 0"}
 }
 
 

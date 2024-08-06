@@ -1,7 +1,7 @@
 record(ao, "$(P)$(D)$(S)") {
     field(DESC, "$(DESC)")
     field(DTYP,"asynFloat64")
-    field(OUT,"@asyn($(PORT) $(OFFSET))FLOAT32_LE")
+    field(OUT,"@asyn($(PORT) $(OFFSET))$(DATA_TYPE)")
     field(EGU, "$(EGU='')")
     field(PREC,"$(PREC=0)")
     field(HOPR,"$(HOPR=0)")

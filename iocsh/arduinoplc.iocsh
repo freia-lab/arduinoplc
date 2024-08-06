@@ -1,7 +1,7 @@
 #- ###         MODBUS   siargo   iocsh              ###
 #- ####################################################
 #- >> Mandatory
-#- ASYN_PORT_NAME - MODBUS ASYN <name>
+#- ASYN_PORT - MODBUS ASYN <name>
 #- PREFIX	  - PV PREFIX
 #- IP_ADDR	  - ethernet address
 #- IOCNAME	  - Prefix for the asynRec
@@ -20,14 +20,14 @@ epicsEnvSet("IOCDIR", "arduinoplc")
 #-			   noAutoConnect, 
 #-			   noProcessEos)
 #
-drvAsynIPPortConfigure("$(ASYN_PORT_NAME)","$(IP_ADDR):$(IP_PORT=502)",0,0,1)
+drvAsynIPPortConfigure("$(ASYN_PORT)","$(IP_ADDR):$(IP_PORT=502)",0,0,1)
 		
 #modbusInterposeConfig(portName, 
 #                      linkType,
 #                      timeoutMsec,
 #                      writeDelayMsec)
 
-modbusInterposeConfig("$(ASYN_PORT_NAME)",0,2000,0)
+modbusInterposeConfig("$(ASYN_PORT)",0,2000,0)
 
 #drvModbusAsynConfigure	 'Port name'
 #			 'Octet port name' 
@@ -40,19 +40,30 @@ modbusInterposeConfig("$(ASYN_PORT_NAME)",0,2000,0)
 #			 'PLC type'
 
 
-drvModbusAsynConfigure(RO_DATA_$(ASYN_PORT_NAME), "$(ASYN_PORT_NAME)", 255, 3, 0x0000, 8, "UINT16", 1000, "arduinoplc")
+drvModbusAsynConfigure(RO_DATA_$(ASYN_PORT), "$(ASYN_PORT)", 255, 3, 0x0000, 8, "UINT16", 1000, "arduinoplc")
 
-drvModbusAsynConfigure(COILS_DATA_$(ASYN_PORT_NAME), "$(ASYN_PORT_NAME)", 255, 5, 0x0000, 8, "UINT16", 1, "arduinoplc")
-drvModbusAsynConfigure(AO_DATA_$(ASYN_PORT_NAME), "$(ASYN_PORT_NAME)", 255, 16, 0x0000, 8, "UINT16", 1, "arduinoplc")
-drvModbusAsynConfigure(DI_DATA_$(ASYN_PORT_NAME), "$(ASYN_PORT_NAME)", 255, 2, 0x0000, 8, "UINT16", 500, "arduinoplc")
-drvModbusAsynConfigure(AI_DATA_$(ASYN_PORT_NAME), "$(ASYN_PORT_NAME)", 255, 4, 0x0000, 12, "UINT16", 1000, "arduinoplc")
+#drvModbusAsynConfigure(HRR_DATA_$(ASYN_PORT), "$(ASYN_PORT)", 255, 4, 25000, 2, "UINT16", 1000, "arduinoplc")
+
+# The two address ranges below can be read using function 4 (function 3 doesn't work) but I don't know the meaning the data
+#drvModbusAsynConfigure(HRR_DATA_$(ASYN_PORT), "$(ASYN_PORT)", 255, 4, 0x2000, 15, "UINT16", 1000, "arduinoplc")
+#drvModbusAsynConfigure(HRRO_DATA_$(ASYN_PORT), "$(ASYN_PORT)", 255, 4, 0x3000, 7, "UINT16", 1000, "arduinoplc")
+
+# The adress ranges for the Global shared  variables (addresses 0x6000-0x6fff)
+# can be read using neither function 4 but the Modbus address 0x6000 corresponds to the variable defined in the PLC at adress 0x6001
+drvModbusAsynConfigure(HRR_DATA_$(ASYN_PORT), "$(ASYN_PORT)", 255, 4, 0x6000, 5, "UINT16", 1000, "arduinoplc")
+drvModbusAsynConfigure(HRW_DATA_$(ASYN_PORT), "$(ASYN_PORT)", 255, 16, 0x6000, 5, "UINT16", 1, "arduinoplc")
+
+
+drvModbusAsynConfigure(COILS_DATA_$(ASYN_PORT), "$(ASYN_PORT)", 255, 5, 0x0000, 8, "UINT16", 1, "arduinoplc")
+drvModbusAsynConfigure(AO_DATA_$(ASYN_PORT), "$(ASYN_PORT)", 255, 16, 0x0000, 8, "UINT16", 1, "arduinoplc")
+drvModbusAsynConfigure(DI_DATA_$(ASYN_PORT), "$(ASYN_PORT)", 255, 2, 0x0000, 8, "UINT16", 500, "arduinoplc")
+drvModbusAsynConfigure(AI_DATA_$(ASYN_PORT), "$(ASYN_PORT)", 255, 4, 0x0000, 12, "UINT16", 1000, "arduinoplc")
 
 #Load your database defining the EPICS records
 
-dbLoadRecords("arduinoplc.db", "PORT_COILS=COILS_DATA_$(ASYN_PORT_NAME),PORT_DI=DI_DATA_$(ASYN_PORT_NAME),PORT_AI=AI_DATA_$(ASYN_PORT_NAME),PORT_AO=AO_DATA_$(ASYN_PORT_NAME),PORT_RO=RO_DATA_$(ASYN_PORT_NAME),P=$(PREFIX),D=$(DEV_NAME)")
+dbLoadRecords("arduinoplc.db", "PORT_COILS=COILS_DATA_$(ASYN_PORT),PORT_DI=DI_DATA_$(ASYN_PORT),PORT_AI=AI_DATA_$(ASYN_PORT),PORT_AO=AO_DATA_$(ASYN_PORT),PORT_RO=RO_DATA_$(ASYN_PORT),PORT_HRR=HRR_DATA_$(ASYN_PORT),PORT_HRW=HRW_DATA_$(ASYN_PORT),P=$(PREFIX),D=$(DEV_NAME)")
 
-
-dbLoadRecords("asynRecord.db","P=$(IOCNAME),R=:asynRec,PORT='$(ASYN_PORT_NAME)',ADDR='0',IMAX='1024',OMAX='256'")
+dbLoadRecords("asynRecord.db","P=$(IOCNAME),R=:asynRec,PORT='$(ASYN_PORT)',ADDR='0',IMAX='1024',OMAX='256'")
 
 #################################################
 
@@ -60,5 +71,5 @@ dbLoadRecords("asynRecord.db","P=$(IOCNAME),R=:asynRec,PORT='$(ASYN_PORT_NAME)',
 
 #################################################
 
-asynSetTraceIOMask "$(ASYN_PORT_NAME)",0,4   # Enable traceIOHex
-#asynSetTraceMask "$(ASYN_PORT_NAME)",0,9     # Enable traceError and traceIODriver
+asynSetTraceIOMask "$(ASYN_PORT)",0,4   # Enable traceIOHex
+#asynSetTraceMask "$(ASYN_PORT)",0,9     # Enable traceError and traceIODriver
