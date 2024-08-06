@@ -53,6 +53,7 @@ drvModbusAsynConfigure(RO_DATA_$(ASYN_PORT), "$(ASYN_PORT)", 255, 3, 0x0000, 8, 
 drvModbusAsynConfigure(HRR_DATA_$(ASYN_PORT), "$(ASYN_PORT)", 255, 4, 0x6000, 5, "UINT16", 1000, "arduinoplc")
 drvModbusAsynConfigure(HRW_DATA_$(ASYN_PORT), "$(ASYN_PORT)", 255, 16, 0x6000, 5, "UINT16", 1, "arduinoplc")
 
+drvModbusAsynConfigure(PAR_DATA_$(ASYN_PORT), "$(ASYN_PORT)", 255, 3, 0x4000, 8, "UINT16", 1000, "arduinoplc")
 
 drvModbusAsynConfigure(COILS_DATA_$(ASYN_PORT), "$(ASYN_PORT)", 255, 5, 0x0000, 8, "UINT16", 1, "arduinoplc")
 drvModbusAsynConfigure(AO_DATA_$(ASYN_PORT), "$(ASYN_PORT)", 255, 16, 0x0000, 8, "UINT16", 1, "arduinoplc")
@@ -61,7 +62,7 @@ drvModbusAsynConfigure(AI_DATA_$(ASYN_PORT), "$(ASYN_PORT)", 255, 4, 0x0000, 12,
 
 #Load your database defining the EPICS records
 
-dbLoadRecords("arduinoplc.db", "PORT_COILS=COILS_DATA_$(ASYN_PORT),PORT_DI=DI_DATA_$(ASYN_PORT),PORT_AI=AI_DATA_$(ASYN_PORT),PORT_AO=AO_DATA_$(ASYN_PORT),PORT_RO=RO_DATA_$(ASYN_PORT),PORT_HRR=HRR_DATA_$(ASYN_PORT),PORT_HRW=HRW_DATA_$(ASYN_PORT),P=$(PREFIX),D=$(DEV_NAME)")
+dbLoadRecords("arduinoplc.db", "PORT_COILS=COILS_DATA_$(ASYN_PORT),PORT_DI=DI_DATA_$(ASYN_PORT),PORT_AI=AI_DATA_$(ASYN_PORT),PORT_AO=AO_DATA_$(ASYN_PORT),PORT_RO=RO_DATA_$(ASYN_PORT),PORT_HRR=HRR_DATA_$(ASYN_PORT),PORT_HRW=HRW_DATA_$(ASYN_PORT),PORT_PAR=PAR_DATA_$(ASYN_PORT),P=$(PREFIX),D=$(DEV_NAME)")
 
 dbLoadRecords("asynRecord.db","P=$(IOCNAME),R=:asynRec,PORT='$(ASYN_PORT)',ADDR='0',IMAX='1024',OMAX='256'")
 

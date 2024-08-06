@@ -43,6 +43,10 @@ file "arduinoplc-ai.template" { pattern
 {VAR-01-RBK	  1	     "$(PORT_HRR)"    	  UINT16       ""	  "2"  "Status variable 1 read-back"}
 {VAR-02-RBK	  2	     "$(PORT_HRR)"     	  UINT16       ""	  "2"  "Status variable 2 read-back"}
 {VAR-03-RBK	  3	     "$(PORT_HRR)"    	  FLOAT32_LE   ""	  "2"  "Status variable 3 read-back"}
+{PAR-00-RBK	  0	     "$(PORT_PAR)"     	  FLOAT32_LE   ""	  "2"  "Status variable 0 read-back"}
+{PAR-01-RBK	  2	     "$(PORT_PAR)"    	  FLOAT32_LE   ""	  "2"  "Status variable 1 read-back"}
+{PAR-02-RBK	  4	     "$(PORT_PAR)"     	  FLOAT32_LE   ""	  "2"  "Status variable 2 read-back"}
+{PAR-03-RBK	  6	     "$(PORT_PAR)"    	  FLOAT32_LE   ""	  "2"  "Status variable 3 read-back"}
 }
 
 file "arduinoplc-ao.template" { pattern
@@ -52,6 +56,8 @@ file "arduinoplc-ao.template" { pattern
 {AO-02		  4	     "$(PORT_AO)"     	  FLOAT32_LE   ""	  "2"  "Analog output 2"}
 {AO-03		  6	     "$(PORT_AO)"     	  FLOAT32_LE   ""	  "2"  "Analog output 3"}
 {VAR-00		  0	     "$(PORT_HRW)"     	  UINT16       ""	  "0"  "Status variable 0"}
+{VAR-01		  1	     "$(PORT_HRW)"     	  UINT16       ""	  "0"  "Status variable 0"}
+{VAR-02		  2	     "$(PORT_HRW)"     	  UINT16       ""	  "0"  "Status variable 0"}
 }
 
 
