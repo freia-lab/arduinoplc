@@ -1,7 +1,7 @@
 record(longin,"$(P)$(D)$(S)") {
     field(DESC, "$(DESC)")
     field(DTYP,"asynInt32")
-    field(INP,"@asyn($(PORT) $(OFFSET))INT32_LE")
+    field(INP,"@asyn($(PORT) $(OFFSET))$(DTATA_TYPE='UINT16')")
     field(EGU, "$(EGU='bit')")
     field(SCAN, "I/O Intr")
 }

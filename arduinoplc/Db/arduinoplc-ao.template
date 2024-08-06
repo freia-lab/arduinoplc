@@ -6,6 +6,6 @@ record(ao, "$(P)$(D)$(S)") {
     field(PREC,"$(PREC=0)")
     field(HOPR,"$(HOPR=0)")
     field(LOPR,"$(LOPR=0)")
-#    field(PINI, "YES")
+    field(PINI, "YES")
 }
 

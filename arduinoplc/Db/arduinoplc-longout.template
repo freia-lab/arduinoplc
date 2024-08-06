@@ -1,0 +1,7 @@
+record(longout,"$(P)$(D)$(S)") {
+    field(DESC, "$(DESC)")
+    field(DTYP,"asynInt32")
+    field(OUT,"@asyn($(PORT) $(OFFSET))$(DATA_TYPE='UINT16')")
+    field(EGU, "$(EGU='bit')")
+    field(PINI, "$(PINI='YES')")
+}

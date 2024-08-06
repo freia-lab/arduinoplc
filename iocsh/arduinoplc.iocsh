@@ -50,10 +50,10 @@ drvModbusAsynConfigure(RO_DATA_$(ASYN_PORT), "$(ASYN_PORT)", 255, 3, 0x0000, 8, 
 
 # The adress ranges for the Global shared  variables (addresses 0x6000-0x6fff)
 # can be read using neither function 4 but the Modbus address 0x6000 corresponds to the variable defined in the PLC at adress 0x6001
-drvModbusAsynConfigure(HRR_DATA_$(ASYN_PORT), "$(ASYN_PORT)", 255, 4, 0x6000, 5, "UINT16", 1000, "arduinoplc")
-drvModbusAsynConfigure(HRW_DATA_$(ASYN_PORT), "$(ASYN_PORT)", 255, 16, 0x6000, 5, "UINT16", 1, "arduinoplc")
+drvModbusAsynConfigure(HRR_DATA_$(ASYN_PORT), "$(ASYN_PORT)", 255, 4, 0x6000, 12, "UINT16", 1000, "arduinoplc")
+drvModbusAsynConfigure(HRW_DATA_$(ASYN_PORT), "$(ASYN_PORT)", 255, 16, 0x6000, 12, "UINT16", 1, "arduinoplc")
 
-drvModbusAsynConfigure(PAR_DATA_$(ASYN_PORT), "$(ASYN_PORT)", 255, 3, 0x4000, 8, "UINT16", 1000, "arduinoplc")
+drvModbusAsynConfigure(PAR_DATA_$(ASYN_PORT), "$(ASYN_PORT)", 255, 3, 0x4000, 12, "UINT16", 1000, "arduinoplc")
 
 drvModbusAsynConfigure(COILS_DATA_$(ASYN_PORT), "$(ASYN_PORT)", 255, 5, 0x0000, 8, "UINT16", 1, "arduinoplc")
 drvModbusAsynConfigure(AO_DATA_$(ASYN_PORT), "$(ASYN_PORT)", 255, 16, 0x0000, 8, "UINT16", 1, "arduinoplc")

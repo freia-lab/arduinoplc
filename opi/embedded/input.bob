@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Saved on 2024-08-06 17:25:32 by konrad-->
+<display version="2.0.0">
+  <name>input</name>
+  <width>410</width>
+  <height>30</height>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update</name>
+    <pv_name>$(P)$(D)$(S).DESC</pv_name>
+    <x>20</x>
+    <y>5</y>
+    <width>200</width>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_1</name>
+    <pv_name>$(P)$(D)$(S)</pv_name>
+    <x>240</x>
+    <y>5</y>
+    <width>110</width>
+  </widget>
+</display>
