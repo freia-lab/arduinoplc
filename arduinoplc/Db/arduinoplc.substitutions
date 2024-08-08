@@ -37,10 +37,10 @@ file "arduinoplc-ai.template" { pattern
 {FVAR-01-RBK	  6	     "$(PORT_HRR)"    	  FLOAT32_LE   ""	  "2"  "Float variable 1 read-back"}
 {FVAR-02-RBK	  8	     "$(PORT_HRR)"     	  FLOAT32_LE   ""	  "2"  "Float variable 2 read-back"}
 {FVAR-03-RBK	  10	     "$(PORT_HRR)"    	  FLOAT32_LE   ""	  "2"  "Float variable 3 read-back"}
-{FPAR-00	  4	     "$(PORT_PAR"     	  FLOAT32_LE   ""	  "2"  "Float parameter 0"}
-{FPAR-01	  6	     "$(PORT_PAR)"    	  FLOAT32_LE   ""	  "2"  "Float parameter 1"}
-{FPAR-02	  8	     "$(PORT_PAR)"     	  FLOAT32_LE   ""	  "2"  "Float parameter 2"}
-{FPAR-03	  10	     "$(PORT_PAR)"    	  FLOAT32_LE   ""	  "2"  "Float parameter 3"}
+{FPAR-00-RBK	  4	     "$(PORT_PAR"     	  FLOAT32_LE   ""	  "2"  "Float parameter 0 read-back"}
+{FPAR-01-RBK	  6	     "$(PORT_PAR)"    	  FLOAT32_LE   ""	  "2"  "Float parameter 1 read-back"}
+{FPAR-02-RBK	  8	     "$(PORT_PAR)"     	  FLOAT32_LE   ""	  "2"  "Float parameter 2 read-back"}
+{FPAR-03-RBK	  10	     "$(PORT_PAR)"    	  FLOAT32_LE   ""	  "2"  "Float parameter 3 read-back"}
 }
 
 file "arduinoplc-ao.template" { pattern
@@ -53,6 +53,10 @@ file "arduinoplc-ao.template" { pattern
 {FVAR-01	  6	     "$(PORT_HRW)"     	  FLOAT32_LE   ""	  "2"  "Float variable 1"}
 {FVAR-02	  8	     "$(PORT_HRW)"     	  FLOAT32_LE   ""	  "2"  "Float variable 2"}
 {FVAR-03	  10	     "$(PORT_HRW)"     	  FLOAT32_LE   ""	  "2"  "Float variable 2"}
+{FPAR-00	  4	     "$(PORT_PARW"     	  FLOAT32_LE   ""	  "2"  "Float parameter 0"}
+{FPAR-01	  6	     "$(PORT_PARW)"    	  FLOAT32_LE   ""	  "2"  "Float parameter 1"}
+{FPAR-02	  8	     "$(PORT_PARW)"       FLOAT32_LE   ""	  "2"  "Float parameter 2"}
+{FPAR-03	  10	     "$(PORT_PARW)"    	  FLOAT32_LE   ""	  "2"  "Float parameter 3"}
 }
 
 file "arduinoplc-longin.template" { pattern
@@ -68,10 +72,10 @@ file "arduinoplc-longin.template" { pattern
 {IVAR-01-RBK  	 1  	     "$(PORT_HRR)"	"Int variable 1 read-back"}
 {IVAR-02-RBK   	 2  	     "$(PORT_HRR)"	"Int variable 2 read-back"}
 {IVAR-03-RBK   	 3  	     "$(PORT_HRR)"	"Int variable 3 read-back"}
-{IPAR-00	 0	     "$(PORT_PAR)"     	"Int parameter 0"}
-{IPAR-01	 1	     "$(PORT_PAR)"    	"Int parameter 1"}
-{IPAR-02	 2	     "$(PORT_PAR)"     	"Int parameter 2"}
-{IPAR-03	 3	     "$(PORT_PAR)"    	"Int parameter 3"}
+{IPAR-00-RBK	 0	     "$(PORT_PAR)"     	"Int parameter 0 read-back"}
+{IPAR-01-RBK	 1	     "$(PORT_PAR)"    	"Int parameter 1 read-back"}
+{IPAR-02-RBK	 2	     "$(PORT_PAR)"     	"Int parameter 2 read-back"}
+{IPAR-03-RBK	 3	     "$(PORT_PAR)"    	"Int parameter 3 read-back"}
 }
 
 file "arduinoplc-longout.template" { pattern
@@ -80,4 +84,8 @@ file "arduinoplc-longout.template" { pattern
 {IVAR-01   	 1  	     "$(PORT_HRW)"	"Int variable 1"}
 {IVAR-02   	 2  	     "$(PORT_HRW)"	"Int variable 2"}
 {IVAR-03   	 3 	     "$(PORT_HRW)"	"Int variable 3"}
+{IPAR-00	 0	     "$(PORT_PARW)"    	"Int parameter 0"}
+{IPAR-01	 1	     "$(PORT_PARW)"    	"Int parameter 1"}
+{IPAR-02	 2	     "$(PORT_PARW)"    	"Int parameter 2"}
+{IPAR-03	 3	     "$(PORT_PARW)"    	"Int parameter 3"}
 }
