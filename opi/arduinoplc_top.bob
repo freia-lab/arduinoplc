@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2024-08-08 16:40:39 by konrad-->
+<!--Saved on 2024-08-08 17:09:14 by konrad-->
 <display version="2.0.0">
   <name>ArduinoPMC</name>
   <macros>
-    <P>test:</P>
+    <P>LLRF-Aux:</P>
     <D>ArduinoPMC:</D>
   </macros>
   <width>1400</width>
