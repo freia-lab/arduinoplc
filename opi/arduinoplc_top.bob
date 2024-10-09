@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2024-08-08 17:09:14 by konrad-->
+<!--Saved on 2024-10-09 11:31:50 by konrad-->
 <display version="2.0.0">
   <name>ArduinoPMC</name>
   <macros>
@@ -737,5 +737,19 @@
       <height>30</height>
       <transparent>true</transparent>
     </widget>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_1</name>
+    <actions>
+      <action type="open_display">
+        <file>helper-opi-files/cavity-sel.bob</file>
+        <target>window</target>
+        <description>Cavity selector...</description>
+      </action>
+    </actions>
+    <x>1130</x>
+    <y>20</y>
+    <width>120</width>
+    <tooltip>$(actions)</tooltip>
   </widget>
 </display>
